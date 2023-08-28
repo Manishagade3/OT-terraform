@@ -20,6 +20,15 @@ module "network" {
 
 }
 
+module "route53" {
+  source           = "../../../module/route53"
+  internal_alb_dns = module.alb.internal_alb_dns
+  record_type      = "CNAME"
+  subdomain        = "dev"
+  domain           = "manish.local"
+  vpc_id           = module.network.vpc_id
+}
+
 module "alb" {
   source           = "../../../module/alb"
   security_group   = module.network.security_group
@@ -28,7 +37,6 @@ module "alb" {
   public_subnet_1  = module.network.public_subnet_1
   public_subnet_2  = module.network.public_subnet_2
   vpc_id           = module.network.vpc_id
-
 
 }
 
