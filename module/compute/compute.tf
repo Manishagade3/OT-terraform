@@ -2,6 +2,11 @@ resource "tls_private_key" "OT-key" {
   algorithm = "RSA"
 }
 
+resource "local_file" "ssh_key" {
+  filename = "${aws_key_pair.OT-key.key_name}.pem"
+  content = tls_private_key.OT-key.private_key_pem
+}
+
 resource "aws_key_pair" "OT-key" {
   key_name   = "OT-key"
   public_key = tls_private_key.OT-key.public_key_openssh

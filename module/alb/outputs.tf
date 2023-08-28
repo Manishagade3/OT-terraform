@@ -31,4 +31,6 @@ output "lb_app" {
   value       = aws_lb.app.arn
   description = "lb_app_arn"
 }
-
+output "internal_alb_dns" {
+  value = aws_lb.app.dns_name
+}
