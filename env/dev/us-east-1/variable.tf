@@ -73,20 +73,20 @@ variable "db_instance_class" {
   default     = "db.t2.micro"
 }
 
-variable "db_username" {
-  description = "Username for the RDS instance"
-  default     = "admin"
-}
+#variable "db_username" {
+#  description = "Username for the RDS instance"
+#  default     = "admin"
+#}
 
-variable "db_password" {
-  description = "Password for the RDS instance"
-  sensitive   = true
-}
+#variable "db_password" {
+#  description = "Password for the RDS instance"
+#  sensitive   = true
+#}
 
-variable "multi_az" {
-  description = "Multi-az deployment for RDS"
-  default     = false
-}
+#variable "multi_az" {
+#  description = "Multi-az deployment for RDS"
+#  default     = false
+#}
 
 #for eks cluster
 variable "subnet_id_1" {
