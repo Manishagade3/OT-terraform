@@ -60,4 +60,5 @@ variable "salary_ami" {}
   }
   variable "frontend_asg_size_desired" {
   }
- 
+variable "instance_profile_ec2" {}
+variable "bation_name" {} 

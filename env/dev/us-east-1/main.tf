@@ -29,6 +29,13 @@ module "route53" {
   vpc_id           = module.network.vpc_id
 }
 
+module "iam" {
+  source           = "../../../module/iam"
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+  role_name = "my-ec2-role"
+
+}
+
 module "alb" {
   source           = "../../../module/alb"
   security_group   = module.network.security_group
@@ -84,6 +91,8 @@ module "compute" {
   frontend_asg_size_min          = var.frontend_asg_size_min
   frontend_asg_size_max          = var.frontend_asg_size_max
   frontend_asg_size_desired      = var.frontend_asg_size_desired
+  instance_profile_ec2 = module.iam.instance_profile_ec2
+  bation_name = "bation_host"
 }
 
 

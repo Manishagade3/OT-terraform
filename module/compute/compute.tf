@@ -18,7 +18,13 @@ resource "aws_instance" "bastion" {
   subnet_id     = var.public_subnet_1
   security_groups = [var.security_group]
   key_name      = aws_key_pair.OT-key.key_name
-  associate_public_ip_address = true 
+  associate_public_ip_address = true
+  iam_instance_profile = var.instance_profile_ec2
+
+  tags = {
+    Name = var.bation_name
+    Environment = "Production"
+  } 
   
   
 }
