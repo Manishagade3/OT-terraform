@@ -42,7 +42,7 @@ variable "database_subnets" {
 }
 variable "ports" {
   type    = list(number)
-  default = [80, 22, 8080, 8081, 8083, 3000, 3306, 9200]
+  default = [80, 22, 8080, 8081, 8083, 3000, 3306, 9200, 443]
 }
 
 variable "web_instance_type" {
