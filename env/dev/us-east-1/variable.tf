@@ -100,36 +100,36 @@ variable "subnet_id_2" {
 }
 
 variable "web_ami" {
-  default = "ami-0e09cd2f9ccfc3b9e"
+  default = ""
 }
 variable "bation_ami" {
-  default = "ami-0e09cd2f9ccfc3b9e"
+  default = "ami-053b0d53c279acc90"
 }
 
 
 variable "frontend_ami" {
   type    = string
-  default = "ami-0e09cd2f9ccfc3b9e"
+  default = "ami-053b0d53c279acc90"
 }
 
 variable "attendance_ami" {
   type    = string
-  default = "ami-02685f9f6133f071d"
+  default = "ami-053b0d53c279acc90"
 }
 
 variable "employee_ami" {
   type    = string
-  default = "ami-0dd3d3d401a108eb6"
+  default = "ami-053b0d53c279acc90"
 }
 
 variable "salary_ami" {
   type    = string
-  default = "ami-0a260ebd77f8744fb"
+  default = "ami-053b0d53c279acc90"
 }
 
 variable "mysql_ami" {
   type    = string
-  default = "ami-0f340b7b6cbae2c59"
+  default = "ami-053b0d53c279acc90"
 }
 
 variable "bucket_name" {
