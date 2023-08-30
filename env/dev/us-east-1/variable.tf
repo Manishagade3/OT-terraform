@@ -50,23 +50,23 @@ variable "web_instance_type" {
   default     = "t2.micro"
 }
 variable "bastion_instance_type" {
-  default = "t2.micro"
+  default = "t2.small"
 }
 
 variable "app_instance_type" {
-  default = "t2.micro"
+  default = "t2.small"
 }
 variable "frontend_instance_type" {
-  default = "t2.micro"
+  default = "t2.small"
 }
 variable "employee_instance_type" {
-  default = "t2.micro"
+  default = "t2.small"
 }
 variable "attendance_instance_type" {
-  default = "t2.micro"
+  default = "t2.small"
 }
 variable "salary_instance_type" {
-  default = "t2.micro"
+  default = "t2.small"
 }
 variable "db_instance_class" {
   description = "RDS instance class for the database tier"
