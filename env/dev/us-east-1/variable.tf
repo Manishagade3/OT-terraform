@@ -100,7 +100,7 @@ variable "subnet_id_2" {
 }
 
 variable "web_ami" {
-  default = ""
+  default = "ami-053b0d53c279acc90"
 }
 variable "bation_ami" {
   default = "ami-053b0d53c279acc90"
